@@ -56,23 +56,23 @@ const SignUpForm = () => {
   const benefits = [
     {
       icon: Gift,
-      title: "0.1 SOL Starter Fund",
-      description: "Free SOL to get you started"
+      title: "Complete Funding Package",
+      description: "0.1 SOL starter fund + launch funding from our vault system"
     },
     {
       icon: Users,
       title: "Live 1-on-1 Support",
-      description: "Personal guidance from experts"
+      description: "Personal guidance from experts + streamer allrounder pack"
     },
     {
       icon: Calendar,
-      title: "Flexible Scheduling",
-      description: "Sessions available 24/7"
+      title: "Launch Calendar Feature",
+      description: "Get featured on our live pump streams for maximum exposure"
     },
     {
       icon: CheckCircle,
-      title: "Success Guarantee",
-      description: "We stay until you succeed"
+      title: "Growth Investment",
+      description: "We fund your events, trips, gear - everything you need to grow"
     }
   ];
 

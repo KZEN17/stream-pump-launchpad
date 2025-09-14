@@ -33,7 +33,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          From <strong className="text-primary">Twitch to Riches</strong>. Get live onboarding, wallet funding, and expert guidance to launch your first pump.fun stream successfully.
+          From <strong className="text-primary">Twitch to Riches</strong>. Get live onboarding, wallet funding, gear packages, launch events, and our Strong Holding Vault system to maximize your pump.fun success.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

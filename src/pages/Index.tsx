@@ -1,6 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import SuccessStories from "@/components/SuccessStories";
+import ServicesSection from "@/components/ServicesSection";
 import OnboardingGuide from "@/components/OnboardingGuide";
+import LaunchCalendar from "@/components/LaunchCalendar";
 import SignUpForm from "@/components/SignUpForm";
 import OBSGuide from "@/components/OBSGuide";
 
@@ -9,7 +11,9 @@ const Index = () => {
     <main className="min-h-screen">
       <HeroSection />
       <SuccessStories />
+      <ServicesSection />
       <OnboardingGuide />
+      <LaunchCalendar />
       <SignUpForm />
       <OBSGuide />
       
