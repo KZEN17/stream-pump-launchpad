@@ -1,13 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import SuccessStories from "@/components/SuccessStories";
+import OnboardingGuide from "@/components/OnboardingGuide";
+import SignUpForm from "@/components/SignUpForm";
+import OBSGuide from "@/components/OBSGuide";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <HeroSection />
+      <SuccessStories />
+      <OnboardingGuide />
+      <SignUpForm />
+      <OBSGuide />
+      
+      {/* Footer */}
+      <footer className="bg-stream-card/50 border-t border-border/20 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold glow-text mb-4">StreamLaunch</h3>
+            <p className="text-muted-foreground mb-6">
+              Your gateway from traditional streaming to pump.fun success
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-muted-foreground">
+              <a href="#" className="hover:text-primary transition-colors">Terms</a>
+              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
+              <a href="#" className="hover:text-primary transition-colors">Support</a>
+              <a href="#" className="hover:text-primary transition-colors">Discord</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 };
 

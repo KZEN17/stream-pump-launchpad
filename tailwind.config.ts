@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // StreamLaunch custom colors
+        'stream-green': "hsl(var(--stream-green))",
+        'stream-green-glow': "hsl(var(--stream-green-glow))",
+        'stream-dark': "hsl(var(--stream-dark))",
+        'stream-card': "hsl(var(--stream-card))",
+        'stream-muted': "hsl(var(--stream-muted))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
