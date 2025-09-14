@@ -1533,6 +1533,11 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+appwrite@^20.0.0:
+  version "20.0.0"
+  resolved "https://registry.yarnpkg.com/appwrite/-/appwrite-20.0.0.tgz#a2966ddecc6a5d181d2bfedd73287f1342c52ff2"
+  integrity sha512-1uUWLCHT2ByJORz5+NORNk74HW02csg8Jm6lUKUog2DU9WnepqzbLnlD7BC22+XVo5tFp29dreinJk/doVTeTw==
+
 arg@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.2.tgz#c81433cc427c92c4dcf4865142dbca6f15acd59c"
