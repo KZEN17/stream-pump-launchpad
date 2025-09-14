@@ -86,14 +86,6 @@ const OBSGuide = () => {
     }
   ];
 
-  const overlayFeatures = [
-    "Real-time pump.fun price ticker",
-    "Follower count display",
-    "Recent transactions feed",
-    "Chat integration overlay",
-    "Success milestone alerts"
-  ];
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-stream-card/10">
       <div className="max-w-6xl mx-auto">
@@ -173,47 +165,6 @@ const OBSGuide = () => {
             </Card>
           ))}
         </div>
-
-        {/* Overlay Features */}
-        <Card className="bg-stream-card/50 backdrop-blur-sm border-border/50 mb-8">
-          <CardContent className="p-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="glow-text">StreamLaunch</span> Custom Overlays
-              </h3>
-              <p className="text-muted-foreground">
-                Professional overlays designed specifically for pump.fun streaming
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold mb-4">Included Features:</h4>
-                <div className="space-y-3">
-                  {overlayFeatures.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-center">
-                <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 text-center">
-                  <Download className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="font-bold mb-2">Free Download</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Get our complete OBS overlay package
-                  </p>
-                  <Button variant="outline-glow" size="sm">
-                    Download Overlays
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
 
         <div className="text-center">
           <Button variant="stream" size="xl" className="animate-pulse-glow">
