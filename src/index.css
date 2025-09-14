@@ -1,3 +1,5 @@
+/* Add these styles to your src/index.css file to fix the white background issue */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,34 +44,43 @@
     --stream-dark: 240 10% 3.9%;
     --stream-card: 240 5% 8%;
     --stream-muted: 240 4% 65%;
-    
+
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 5% 8%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(240 5% 8%) 0%, hsl(240 4% 15%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(149 80% 50%) 0%, hsl(149 80% 60%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(149 80% 50%) 0%, hsl(149 80% 70%) 100%);
-    
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(240 10% 3.9%) 0%,
+      hsl(240 5% 8%) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(240 5% 8%) 0%,
+      hsl(240 4% 15%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(149 80% 50%) 0%,
+      hsl(149 80% 60%) 100%
+    );
+    --gradient-text: linear-gradient(
+      135deg,
+      hsl(149 80% 50%) 0%,
+      hsl(149 80% 70%) 100%
+    );
+
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(149 80% 50% / 0.3);
     --shadow-card: 0 10px 30px -10px hsl(240 10% 3.9% / 0.5);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -83,12 +94,40 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    background: var(--gradient-hero);
+  /* Force dark background everywhere - use Tailwind classes properly */
+  html {
+    @apply bg-stream-dark;
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
 
+  body {
+    @apply bg-stream-dark text-foreground font-sans antialiased;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    overscroll-behavior: none;
+    /* Prevent any white backgrounds */
+    background-color: hsl(var(--stream-dark)) !important;
+  }
+
+  /* Root container uses Tailwind background */
+  #root {
+    @apply bg-stream-dark;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overscroll-behavior: none;
+  }
+
+  /* Main content with gradient */
+  main {
+    background: var(--gradient-hero);
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Custom utility classes for StreamLaunch */
   .glow-text {
     background: var(--gradient-text);
     -webkit-background-clip: text;
@@ -106,7 +145,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -124,6 +164,47 @@
     }
     to {
       box-shadow: 0 0 40px hsl(149 80% 50% / 0.4);
+    }
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-stream-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stream-card;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(149 80% 50% / 0.3);
+  }
+
+  /* Mobile specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    /* iOS Safari specific */
+    html,
+    body {
+      @apply bg-stream-dark;
+      background-color: hsl(var(--stream-dark)) !important;
+    }
+  }
+
+  /* Additional mobile viewport fixes */
+  @media screen and (max-width: 768px) {
+    html,
+    body,
+    #root {
+      @apply bg-stream-dark;
+      background-color: hsl(var(--stream-dark)) !important;
+      overscroll-behavior-y: none;
+      min-height: 100vh;
+      min-height: 100dvh;
     }
   }
 }
