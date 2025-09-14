@@ -1,4 +1,4 @@
-// src/components/HeroSection.tsx (Fixed overflow)
+// src/components/HeroSection.tsx (Updated for navbar compatibility)
 import heroStreamingImage from "@/assets/hero-streaming.jpg";
 import OnboardingModal from "@/components/OnboardingModal";
 import { Button } from "@/components/ui/button";
@@ -26,12 +26,12 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-stream-dark/95 via-stream-dark/90 to-stream-card/95" />
       </div>
 
-      {/* Content Container - Fixed overflow */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Content Container */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Main Content */}
-          <div className="order-2 lg:order-1">
-            <div className="animate-float mb-6">
+          <div className="text-center lg:text-left">
+            <div className="animate-float mb-6 flex justify-center lg:justify-start">
               <div className="inline-flex items-center gap-2 bg-stream-card/50 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 <span className="text-sm font-medium text-muted-foreground">
@@ -40,7 +40,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="glow-text">StreamLaunch</span>
               <br />
               <span className="text-muted-foreground">Your Pump.fun</span>
@@ -48,14 +48,14 @@ const HeroSection = () => {
               <span className="text-foreground">Launchpad</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               From <strong className="text-primary">Twitch to Riches</strong>.
               Get live onboarding, wallet funding, gear packages, launch events,
               and our Strong Holding Vault system to maximize your pump.fun
               success.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
               <Button
                 variant="hero"
                 size="lg"
@@ -70,45 +70,49 @@ const HeroSection = () => {
                 variant="outline-glow"
                 size="lg"
                 className="w-full sm:w-auto"
+                onClick={() => {
+                  const element = document.getElementById("success-stories");
+                  element?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 <TrendingUp className="mr-2 h-5 w-5" />
                 View Success Stories
               </Button>
             </div>
 
-            {/* Stats - Responsive */}
-            <div className="grid grid-cols-3 gap-4 lg:gap-6">
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold glow-text mb-1">
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 lg:gap-6 max-w-lg mx-auto lg:mx-0">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold glow-text mb-1">
                   500+
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground">
                   Streamers Launched
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold glow-text mb-1">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold glow-text mb-1">
                   $2.5M+
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground">
                   Total Volume Pumped
                 </div>
               </div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold glow-text mb-1">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl sm:text-3xl font-bold glow-text mb-1">
                   24/7
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground">
+                <div className="text-sm text-muted-foreground">
                   Live Support
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Livestream */}
-          <div className="order-1 lg:order-2 space-y-4">
-            {/* Stream Container - Responsive */}
-            <div className="relative aspect-video bg-stream-card/80 backdrop-blur-sm rounded-xl lg:rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+          {/* Right Side - Livestream (hidden on mobile, show on tablet+) */}
+          <div className="hidden md:block" id="livestream">
+            {/* Stream Container */}
+            <div className="relative aspect-video bg-stream-card/80 backdrop-blur-sm rounded-xl overflow-hidden border border-primary/20 shadow-2xl mb-4">
               {/* Replace YOUR_STREAM_IFRAME_URL with your actual stream URL */}
               <iframe
                 src="YOUR_STREAM_IFRAME_URL"
@@ -120,14 +124,14 @@ const HeroSection = () => {
 
               {/* Demo Overlay - Remove when you have real stream */}
               <div className="absolute inset-0 flex items-center justify-center bg-stream-dark/90 backdrop-blur-sm">
-                <div className="text-center p-4 lg:p-8">
+                <div className="text-center p-4 lg:p-6">
                   <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Play className="w-6 h-6 lg:w-8 lg:h-8 text-primary" />
                   </div>
                   <h3 className="text-lg lg:text-xl font-bold mb-2">
                     🔴 LIVE NOW
                   </h3>
-                  <p className="text-sm lg:text-base text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4">
                     Live pump.fun onboarding session
                   </p>
                   <div className="flex items-center justify-center gap-3 lg:gap-4 text-xs lg:text-sm text-muted-foreground mb-4">
@@ -151,8 +155,8 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Stream Info - Responsive */}
-            <div className="bg-stream-card/50 backdrop-blur-sm rounded-lg lg:rounded-xl p-4 lg:p-6 border border-border/20">
+            {/* Stream Info */}
+            <div className="bg-stream-card/50 backdrop-blur-sm rounded-lg p-4 lg:p-6 border border-border/20">
               <div className="flex items-center justify-between mb-3 lg:mb-4">
                 <h3 className="font-bold text-base lg:text-lg">
                   Live Onboarding Session
@@ -195,10 +199,38 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Mobile Stream Section - Only show on mobile */}
+        <div className="md:hidden mt-16" id="livestream-mobile">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold mb-2">🔴 Live Stream</h2>
+            <p className="text-muted-foreground text-sm">
+              Watch our live onboarding sessions
+            </p>
+          </div>
+
+          {/* Mobile Stream Container */}
+          <div className="relative aspect-video bg-stream-card/80 backdrop-blur-sm rounded-xl overflow-hidden border border-primary/20 shadow-2xl mb-4">
+            <div className="absolute inset-0 flex items-center justify-center bg-stream-dark/90 backdrop-blur-sm">
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Play className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">🔴 LIVE NOW</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  247 watching • Live chat active
+                </p>
+                <Button variant="stream" onClick={() => setModalOpen(true)}>
+                  Join Live Session
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 lg:w-20 lg:h-20 bg-primary/20 rounded-full blur-xl animate-pulse" />
+      <div className="absolute top-32 left-10 w-16 h-16 lg:w-20 lg:h-20 bg-primary/20 rounded-full blur-xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-24 h-24 lg:w-32 lg:h-32 bg-stream-green-glow/20 rounded-full blur-xl animate-pulse delay-700" />
 
       <OnboardingModal open={modalOpen} onOpenChange={setModalOpen} />

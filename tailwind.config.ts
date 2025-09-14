@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -48,11 +53,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // StreamLaunch custom colors
-        'stream-green': "hsl(var(--stream-green))",
-        'stream-green-glow': "hsl(var(--stream-green-glow))",
-        'stream-dark': "hsl(var(--stream-dark))",
-        'stream-card': "hsl(var(--stream-card))",
-        'stream-muted': "hsl(var(--stream-muted))",
+        "stream-green": "hsl(var(--stream-green))",
+        "stream-green-glow": "hsl(var(--stream-green-glow))",
+        "stream-dark": "hsl(var(--stream-dark))",
+        "stream-card": "hsl(var(--stream-card))",
+        "stream-muted": "hsl(var(--stream-muted))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
