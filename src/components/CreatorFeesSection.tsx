@@ -16,37 +16,37 @@ const CreatorFeesSection = () => {
   const feeProcess = [
     {
       icon: Coins,
-      title: "Creator Fees Collection",
-      description: "We collect minimal creator fees from your successful pumps",
-      details: "Transparent fee structure with no hidden costs"
+      title: "StreamLaunch Fee Collection",
+      description: "We collect our platform fees from successful token launches",
+      details: "Transparent fee structure supporting platform operations"
     },
     {
       icon: TrendingUp,
       title: "Initial Funding & Buying",
-      description: "Your fees fund the initial purchase and create buying pressure on launch",
+      description: "Our fees fund the initial purchase and create buying pressure on launch",
       details: "Strategic market entry to maximize pump potential"
     },
     {
-      icon: Vault,
-      title: "Strong Holding Vault",
-      description: "Tokens are securely stored in our holding vault for long-term value",
-      details: "Professional custody with maximum security protocols"
+      icon: Target,
+      title: "Buyback and Burn",
+      description: "Systematic token buybacks and burns to reduce supply and increase value",
+      details: "Deflationary mechanism that benefits all token holders"
     },
     {
-      icon: Target,
-      title: "Maximized Returns",
-      description: "Strategic holding and selling creates better outcomes for everyone",
-      details: "Win-win system that benefits both creators and investors"
+      icon: Shield,
+      title: "Platform Reinvestment",
+      description: "Fees reinvested into platform improvements and creator support programs",
+      details: "Continuous development of tools and services for creators"
     }
   ];
 
   const benefits = [
-    "No upfront costs - we invest in your success first",
+    "No upfront costs - we only succeed when you succeed",
     "Professional market making on your token launch",
-    "Secure vault storage with institutional-grade security",
-    "Strategic exit planning to maximize token value",
+    "Systematic buyback and burn programs increase token value",
+    "Platform fees reinvested into creator support programs",
     "Transparent fee structure with full visibility",
-    "Reinvestment into your growth and equipment"
+    "Continuous platform improvements and new features"
   ];
 
   return (
@@ -57,10 +57,10 @@ const CreatorFeesSection = () => {
             Revolutionary Fee System
           </Badge>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="glow-text">Creator Fees</span> That Work For You
+            <span className="glow-text">StreamLaunch Fees</span> Drive Success
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Unlike traditional platforms that just take fees, we reinvest your creator fees directly into your token's success through our Strong Holding Vault system.
+            Our platform fees create a powerful ecosystem that benefits everyone - from initial launch support to long-term value creation through buybacks and burns.
           </p>
         </div>
 
@@ -95,8 +95,8 @@ const CreatorFeesSection = () => {
           {/* Benefits */}
           <div>
             <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-primary" />
-              Why Our Fee System Works
+              <TrendingUp className="w-8 h-8 text-primary" />
+              Platform Impact & Benefits
             </h3>
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
@@ -107,7 +107,7 @@ const CreatorFeesSection = () => {
               ))}
             </div>
             <Button variant="stream" size="lg">
-              Learn More About Our Fees
+              View Fee Breakdown
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -117,29 +117,29 @@ const CreatorFeesSection = () => {
             <Card className="bg-primary/10 border-primary/20">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <Vault className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold mb-2">Strong Holding Vault</h4>
+                  <Coins className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <h4 className="text-2xl font-bold mb-2">Platform Performance</h4>
                   <p className="text-muted-foreground">
-                    Our secure vault system that maximizes your token's potential
+                    Real-time stats showing StreamLaunch's impact on the ecosystem
                   </p>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">$2.5M+</div>
-                    <div className="text-xs text-muted-foreground">Total Vault Value</div>
+                    <div className="text-2xl font-bold glow-text mb-1">$485K</div>
+                    <div className="text-xs text-muted-foreground">Platform Fees Generated</div>
                   </div>
                   <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">150+</div>
-                    <div className="text-xs text-muted-foreground">Tokens Held</div>
+                    <div className="text-2xl font-bold glow-text mb-1">$12.8M</div>
+                    <div className="text-xs text-muted-foreground">Total Creator Earnings</div>
                   </div>
                   <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">340%</div>
-                    <div className="text-xs text-muted-foreground">Avg ROI</div>
+                    <div className="text-2xl font-bold glow-text mb-1">2.1M</div>
+                    <div className="text-xs text-muted-foreground">Tokens Burned</div>
                   </div>
                   <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">24/7</div>
-                    <div className="text-xs text-muted-foreground">Monitoring</div>
+                    <div className="text-2xl font-bold glow-text mb-1">500+</div>
+                    <div className="text-xs text-muted-foreground">Launches Supported</div>
                   </div>
                 </div>
               </CardContent>
@@ -152,11 +152,11 @@ const CreatorFeesSection = () => {
                   <h4 className="font-bold">Creator Testimonial</h4>
                 </div>
                 <blockquote className="text-muted-foreground italic mb-4">
-                  "I was skeptical about fees at first, but seeing them reinvest directly into my token launch was incredible. My first pump did 100x better than expected!"
+                  "StreamLaunch's fee system is genius - they use their fees to buy back and burn tokens, which made my launch way more successful than I expected!"
                 </blockquote>
                 <div className="text-sm">
-                  <div className="font-semibold">- CryptoMike92</div>
-                  <div className="text-muted-foreground">$MOONSHOT Creator</div>
+                  <div className="font-semibold">- DiamondHands</div>
+                  <div className="text-muted-foreground">$HODL Creator</div>
                 </div>
               </CardContent>
             </Card>
