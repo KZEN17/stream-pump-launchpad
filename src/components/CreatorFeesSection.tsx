@@ -91,76 +91,11 @@ const CreatorFeesSection = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Benefits */}
-          <div>
-            <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
-              <TrendingUp className="w-8 h-8 text-primary" />
-              Platform Impact & Benefits
-            </h3>
-            <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <Button variant="stream" size="lg">
-              View Fee Breakdown
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-
-          {/* Stats Card */}
-          <div className="space-y-6">
-            <Card className="bg-primary/10 border-primary/20">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <Coins className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold mb-2">Platform Performance</h4>
-                  <p className="text-muted-foreground">
-                    Real-time stats showing StreamLaunch's impact on the ecosystem
-                  </p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">$485K</div>
-                    <div className="text-xs text-muted-foreground">Platform Fees Generated</div>
-                  </div>
-                  <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">$12.8M</div>
-                    <div className="text-xs text-muted-foreground">Total Creator Earnings</div>
-                  </div>
-                  <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">2.1M</div>
-                    <div className="text-xs text-muted-foreground">Tokens Burned</div>
-                  </div>
-                  <div className="text-center p-4 bg-stream-card/50 rounded-lg">
-                    <div className="text-2xl font-bold glow-text mb-1">500+</div>
-                    <div className="text-xs text-muted-foreground">Launches Supported</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-stream-card/30 border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Users className="w-6 h-6 text-primary" />
-                  <h4 className="font-bold">Creator Testimonial</h4>
-                </div>
-                <blockquote className="text-muted-foreground italic mb-4">
-                  "StreamLaunch's fee system is genius - they use their fees to buy back and burn tokens, which made my launch way more successful than I expected!"
-                </blockquote>
-                <div className="text-sm">
-                  <div className="font-semibold">- DiamondHands</div>
-                  <div className="text-muted-foreground">$HODL Creator</div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="text-center">
+          <Button variant="stream" size="lg">
+            View Fee Breakdown
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>

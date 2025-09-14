@@ -16,13 +16,6 @@ import {
 const ServicesSection = () => {
   const services = [
     {
-      icon: Vault,
-      title: "Strong Holding Vault",
-      description: "We take creator fees and do your initial funding & buying on launch, adding tokens to our secure holding vault for maximum pump potential.",
-      features: ["Initial funding on launch", "Strategic buying pressure", "Secure token holding", "Creator fee management"],
-      highlight: "Launch Support"
-    },
-    {
       icon: Package,
       title: "Streamer Allrounder Packs",
       description: "Complete packages to get you streaming-ready with professional equipment, software, and setup assistance.",
@@ -60,7 +53,7 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
             <Card key={index} className="group hover:glow-border transition-all duration-300 bg-stream-card/50 backdrop-blur-sm border-border/50 overflow-hidden">
               <CardContent className="p-8">
@@ -101,7 +94,7 @@ const ServicesSection = () => {
             </div>
             <p className="text-lg text-muted-foreground mb-6">
               Unlike other platforms, we're invested in your success. When you win, we win. 
-              Our creator fees fund your initial launch, and our holding vault system maximizes pump potential.
+              Our platform fees create strategic market support that benefits all creators.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 text-center">
               <div>

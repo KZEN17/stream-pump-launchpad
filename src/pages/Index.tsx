@@ -3,9 +3,9 @@ import SuccessStories from "@/components/SuccessStories";
 import CreatorFeesSection from "@/components/CreatorFeesSection";
 import ServicesSection from "@/components/ServicesSection";
 import OnboardingGuide from "@/components/OnboardingGuide";
-import LaunchCalendar from "@/components/LaunchCalendar";
 import SignUpForm from "@/components/SignUpForm";
 import OBSGuide from "@/components/OBSGuide";
+import ComingSoonSection from "@/components/ComingSoonSection";
 
 const Index = () => {
   return (
@@ -15,9 +15,9 @@ const Index = () => {
       <CreatorFeesSection />
       <ServicesSection />
       <OnboardingGuide />
-      <LaunchCalendar />
       <SignUpForm />
       <OBSGuide />
+      <ComingSoonSection />
       
       {/* Footer */}
       <footer className="bg-stream-card/50 border-t border-border/20 py-12">
